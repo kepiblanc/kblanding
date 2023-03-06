@@ -4,6 +4,7 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head />
+      <link rel={'preload'} href='/home/jumbo-bg.png'/>
       <body>
         <Main />
         <NextScript />

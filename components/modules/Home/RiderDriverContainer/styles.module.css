@@ -1,0 +1,74 @@
+
+.imageBox {
+    grid-area: imageBox;
+    position: relative;
+    min-height: 300px
+}
+
+.swtichBox {
+    grid-area: switchBox;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FDFDFD;
+}
+
+.swtichBox>div {
+    width: 80%;
+    max-width: 550px;
+}
+
+.bulletsBox {
+    grid-area: bulletsBox;
+    display: flex;
+    justify-content: center;
+    background-color: #FDFDFD;
+}
+
+.bulletsBox>div {
+    width: 80%;
+    padding-top: 1rem;
+}
+
+.riderDriverContainer {
+    min-height: 80vh;
+    display: grid;
+    grid-template-areas: 
+                        'imageBox imageBox imageBox switchBox switchBox'
+                        'imageBox imageBox imageBox bulletsBox bulletsBox'
+                        'imageBox imageBox imageBox bulletsBox bulletsBox'
+                        'imageBox imageBox imageBox bulletsBox bulletsBox'
+    ;
+}
+
+@media only screen and (max-width: 768px) {
+    .riderDriverContainer {
+        grid-template-areas: 
+                            'switchBox switchBox'
+                            'imageBox imageBox'
+                            'imageBox imageBox'
+                            'imageBox imageBox'
+                            'imageBox imageBox'
+                            'imageBox imageBox'
+                            'imageBox imageBox'
+                            'bulletsBox bulletsBox'
+                            'bulletsBox bulletsBox'
+                            'bulletsBox bulletsBox'
+                            ;
+    }
+
+    .swtichBox>div {
+        width: 100%;
+        padding: 10px 8px;
+    }
+
+    .imageBox {
+        height: 40vh;
+    }
+
+    .bulletsBox>div {
+        width: fit-content;
+        padding-top: 1rem;
+        padding: 1rem 17px;
+    }
+}

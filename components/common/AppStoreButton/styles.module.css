@@ -1,0 +1,12 @@
+
+.root {
+    @apply border border-[#A6A6A6] rounded-lg flex w-[125px] items-center gap-2 p-[4px]
+}
+
+.light {
+    @apply bg-[#FEC319] text-[#161616]
+}
+
+.dark {
+    @apply bg-[#000000] text-[#FFFFFF]
+}
