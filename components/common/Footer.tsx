@@ -13,7 +13,7 @@ const Footer: FC<Props> = (props) => {
   return (
     <div {...props} className="bg-[#FFFFFF] mt-8">
       <Container>
-        <div className="px-2">
+        <div className="px-8 max-md:px-2">
           <div className="flex justify-between py-6 border-b border-b-[#2B3D51] max-md:flex-col max-md:gap-4">
             <div className="flex items-center gap-4">
               <Link href="">
@@ -41,7 +41,7 @@ const Footer: FC<Props> = (props) => {
             </div>
           </div>
 
-          <div className="flex justify-between items-center py-6 pb-20 max-md:flex-col max-md:gap-4 max-md:items-start">
+          <div className="flex justify-between items-center py-6 pb-20 max-md:pb-6 max-md:flex-col max-md:gap-4 max-md:items-start">
             <p className="text-xs order-1">
               &copy; {year} Kabukaby. All rights reserved
             </p>

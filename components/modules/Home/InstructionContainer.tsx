@@ -29,7 +29,7 @@ const instructions = [
 const InstructionContainer: FC = () => {
   return (
     <Container>
-      <div className="flex min-h-screen max-md:flex-col max-md:items-center gap-3 p-2">
+      <div className="flex min-h-screen max-md:flex-col max-md:items-center gap-3 p-2 px-8 max-md:px-2">
         <div className="relative flex-1 max-lg:w-full lg:-translate-x-[70px] min-h-[400px]">
           <Image
             src={"/home/phones.png"}

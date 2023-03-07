@@ -10,7 +10,7 @@ const Jumbotron: FC = () => {
       <Container>
         <div className="flex-col pt-20 h-[100vh] min-h-[500px] px-2">
           <div className="h-[40%]">
-            <p className="text-center font-bold mb-3">Kabukabu</p>
+            <p className="text-center font-bold mb-3 text-lg">Kabukabu</p>
             <p className="text-center font-bold text-4xl">
               Get Rides to anywhere, fast!
             </p>
@@ -20,7 +20,7 @@ const Jumbotron: FC = () => {
             </div>
           </div>
 
-          <div className="relative w-full max-w-[400px] mx-auto h-[60%]">
+          <div className="relative w-full max-w-[400px] mx-auto h-[60%] max-md:max-w-[200px]">
             <Image
               fill={true}
               alt="Download Kabukabu app"

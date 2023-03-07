@@ -6,7 +6,7 @@ import DownloadCard from "./DownloadCard";
 const DownloadCardContainer: FC = () => {
   return (
     <Container>
-      <div className="flex items-center max-md:flex-col px-2 justify-center w-full gap-x-2 gap-y-10 mt-9">
+      <div className="flex items-center max-md:flex-col  px-8 max-md:px-2 justify-center w-full gap-x-2 gap-y-10 mt-9">
         <div className="flex-1 flex justify-center">
           <DownloadCard
             bgColor="#FFF5D8"

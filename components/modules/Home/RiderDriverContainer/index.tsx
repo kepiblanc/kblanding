@@ -25,23 +25,16 @@ const RiderDriverContainer: FC = () => {
 
   return (
     <Container>
-      <div className={`${styles.riderDriverContainer} max-w-[1230px] mx-auto w-full`}>
+      <div
+        className={`${styles.riderDriverContainer} mx-auto w-full  px-8 max-md:px-2 max-md:bg-[#fff]`}
+      >
         <div className={styles.imageBox}>
-          {isRider ? (
-            <Image
-              fill={true}
-              alt={"Kabukabu Driver"}
-              src="/home/rider.png"
-              style={{ objectFit: "cover" }}
-            />
-          ) : (
-            <Image
-              fill={true}
-              alt={"Kabukabu Driver"}
-              src="/home/driver.png"
-              style={{ objectFit: "cover" }}
-            />
-          )}
+          <Image
+            fill={true}
+            alt={"Kabukabu Driver"}
+            src={isRider ? "/home/rider.png" : "/home/driver.png"}
+            style={{ objectFit: "cover" }}
+          />
         </div>
         <div className={styles.swtichBox}>
           <div>

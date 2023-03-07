@@ -2,7 +2,7 @@
 .imageBox {
     grid-area: imageBox;
     position: relative;
-    min-height: 300px
+    min-height: 300px;
 }
 
 .swtichBox {
@@ -14,7 +14,7 @@
 }
 
 .swtichBox>div {
-    width: 80%;
+    width: 60%;
     max-width: 550px;
 }
 
@@ -26,7 +26,7 @@
 }
 
 .bulletsBox>div {
-    width: 80%;
+    width: 60%;
     padding-top: 1rem;
 }
 
