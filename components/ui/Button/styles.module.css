@@ -16,11 +16,11 @@
 }
 
 .outlined.large, .contained.large {
-    @apply py-3 px-6 text-lg
+    @apply py-3 px-6 text-sm
 }
 
 .text.large {
-    @apply text-lg
+    @apply text-sm
 }
 
 .text.medium {

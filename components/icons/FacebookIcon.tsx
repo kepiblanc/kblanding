@@ -3,8 +3,8 @@ import React, { FC } from "react";
 const FacebookIcon: FC = () => {
   return (
     <svg
-      width="15"
-      height="15"
+      width="20"
+      height="20"
       viewBox="0 0 25 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

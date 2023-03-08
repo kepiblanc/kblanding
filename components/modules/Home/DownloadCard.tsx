@@ -1,6 +1,6 @@
 import AppStoreButton from "@/components/common/AppStoreButton";
 import Image from "next/image";
-import React, { FC, useState, useEffect } from "react";
+import React, { FC, useState } from "react";
 
 interface Props {
   image: string;
@@ -10,27 +10,21 @@ interface Props {
 }
 
 const DownloadCard: FC<Props> = ({ image, title, body, bgColor }) => {
-  const [innerWidth, setInnerWidth] = useState<number>(0);
-
-  const handleWindowResize = (): void => {
-    setInnerWidth(window.innerWidth);
-  };
-
-  useEffect(() => {
-    window.addEventListener("resize", handleWindowResize);
-
-    return () => {
-      window.removeEventListener("resize", handleWindowResize);
-    };
-  }, []);
+  const [isHovering, setIsHovering] = useState<boolean>(false);
 
   return (
     <div
-      className={`flex-col w-full max-w-[650px] h-[550px] max-md:rounded-lg max-md:overflow-hidden`}
+      className={`flex-col w-full max-w-[650px] h-[550px] rounded-lg overflow-hidden`}
+      onMouseOver={() => {
+        setIsHovering(true);
+      }}
+      onMouseOut={() => {
+        setIsHovering(false);
+      }}
     >
       <div
-        className={`w-full relative h-[350px] max-md:!bg-[#FFBF00]`}
-        style={{ backgroundColor: innerWidth >= 768 ? bgColor : "#FFBF00" }}
+        className={`w-full relative h-[350px] ${isHovering && "!bg-[#FFBF00]"}`}
+        style={{ backgroundColor: bgColor }}
       >
         <Image
           src={image}

@@ -1,6 +1,6 @@
 
 .root {
-    @apply border border-[#A6A6A6] rounded-lg flex w-[130px] items-center gap-2 p-[4px]
+    @apply border border-[#A6A6A6] rounded-lg flex w-[145px] items-center gap-2 p-[4px] py-[8px]
 }
 
 .light {
@@ -9,4 +9,10 @@
 
 .dark {
     @apply bg-[#000000] text-[#FFFFFF]
+}
+
+@media only screen and (max-width: 290px) {
+    .root {
+        @apply w-[126px]
+    }
 }

@@ -31,7 +31,7 @@
 }
 
 .riderDriverContainer {
-    min-height: 80vh;
+    min-height: 400px;
     display: grid;
     grid-template-areas: 
                         'imageBox imageBox imageBox switchBox switchBox'

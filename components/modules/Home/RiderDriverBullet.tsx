@@ -10,7 +10,7 @@ const RiderDriverBullet: FC<Props> = ({ title, isLastChild }) => {
   return (
     <div className="flex  w-full h-[60px] ">
       <div
-        className={`relative h-full border-l border-[#FFBF00] w-[20px] ${
+        className={`relative h-full border-dashed border-l border-[#FFBF00] w-[20px] ${
           isLastChild ? "border-none" : ""
         }`}
       >
