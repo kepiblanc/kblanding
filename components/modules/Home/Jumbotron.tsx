@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const Jumbotron: FC = () => {
   return (
-    <div className="min-h-[500px] bg-[url('/home/jumbo-bg.png')] bg-cover bg-center">
+    <div className="min-h-[100vh] bg-[url('/home/jumbo-bg.png')] bg-cover bg-center bg-origin-border">
       <img src="/home/jumbo-bg.png" style={{ display: "none" }} />
       <Container>
         <div className="flex-col pt-20 h-[100vh] min-h-[500px] px-2">
@@ -25,7 +25,7 @@ const Jumbotron: FC = () => {
               fill={true}
               alt="Download Kabukabu app"
               src={"/home/taxi.png"}
-              style={{ objectFit: "contain", objectPosition: "50% 60%" }}
+              style={{ objectFit: "contain", objectPosition: "50% 98%" }}
               priority
             />
           </div>
