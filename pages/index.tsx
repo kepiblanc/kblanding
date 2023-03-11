@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Jumbotron from "@/components/modules/Home/Jumbotron";
+import Jumbotron from "@/components/modules/Home/Jumbotron/Jumbotron";
 import RiderDriverContainer from "@/components/modules/Home/RiderDriverContainer";
 import InstructionContainer from "@/components/modules/Home/InstructionContainer";
 import DownloadCardContainer from "@/components/modules/Home/DownloadCardContainer";
