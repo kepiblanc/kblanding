@@ -12,7 +12,7 @@ const DownloadCardContainer: FC = () => {
             bgColor="#FFF5D8"
             title="Ride With Us"
             body="Get Kabukabu Rider App and enjoy the riding experience"
-            image="/home/drivewithus.png"
+            image="/home/ridewithus.png"
           />
         </div>
         <div className="flex-1 flex justify-center">

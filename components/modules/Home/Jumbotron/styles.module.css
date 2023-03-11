@@ -1,16 +1,19 @@
 
 .jumboContainer {
     background: #ffffff url(/home/jumbo-bg.png)  no-repeat center center/cover;
-    animation: mymove 1s forwards linear;
+    /* animation: mymove 1s forwards linear; */
 }
-
+/* 
 @keyframes mymove {
-    from {
+    0% {
         background-size: 150% 150%;
         opacity: 0;
     }
-    to {
+    99% {
         background-size: 100% 100%;
         opacity: 1;
     }
-  }
+    100% {
+        background-size: cover;
+    }
+  } */
