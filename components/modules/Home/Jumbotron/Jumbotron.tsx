@@ -10,7 +10,7 @@ import styles from "./styles.module.css";
 const Jumbotron: FC = () => {
   return (
     <>
-      <div className={`min-h-[80vh] ${styles.jumboContainer}`}>
+      <div className={`min-h-[85vh] ${styles.jumboContainer}`}>
         <img src="/home/jumbo-bg.png" style={{ display: "none" }} />
         <Container>
           <div className="flex-col pt-20 h-[80vh] min-h-[500px] px-2">
