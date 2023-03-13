@@ -13,6 +13,10 @@
 
 @media only screen and (max-width: 290px) {
     .root {
-        @apply w-[126px]
+        @apply w-[130px] 
+    }
+
+    .appstoreName {
+        @apply text-[17px]
     }
 }

@@ -28,9 +28,9 @@ const AppStoreButton: FC<Props> = ({ store, variant = "light", className }) => {
       <div className="flex items-center">
         <span>{store === "apple" ? <span style={{fill: variant === "dark" ? "#ffffff" : "#161616"}}><AppleStore /></span> : <AndroidStore />}</span>
       </div>
-      <div className="w-full text-left leading-[15px]">
-        <p className="text-xs">{btnText}</p>
-        <p className="font-bold">{storeName}</p>
+      <div className="w-full text-left leading-[5px]">
+        <p className="text-xs font-bold">{btnText}</p>
+        <p className={`font-bold text-[1.33rem] leading-[13px] ${s.appstoreName}`}>{storeName}</p>
       </div>
     </button>
   );
