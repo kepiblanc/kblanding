@@ -40,8 +40,8 @@ const DownloadCard: FC<Props> = ({ image, title, body, bgColor }) => {
             <p className="py-3 text-center text-sm font-bold">{body}</p>
           </div>
           <div className="flex items-center justify-center gap-4 max-sm:gap-2">
-            <AppStoreButton store="android" variant="dark" />
-            <AppStoreButton store="apple" variant="dark" />
+            {/* <AppStoreButton store="android" variant="dark" />
+            <AppStoreButton store="apple" variant="dark" /> */}
           </div>
         </div>
       </div>

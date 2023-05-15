@@ -29,8 +29,8 @@ const Jumbotron: FC = () => {
                 Get Rides to anywhere, fast!
               </p>
               <div className="flex justify-center gap-6 mt-6 max-sm:gap-2">
-                <AppStoreButton store="android" />
-                <AppStoreButton store="apple" />
+                {/* <AppStoreButton store="android" />
+                <AppStoreButton store="apple" /> */}
               </div>
             </motion.div>
 
@@ -47,7 +47,7 @@ const Jumbotron: FC = () => {
               <Image
                 fill={true}
                 alt="Download Kabukabu app"
-                src={"/home/taxi.png"}
+                src={"https://res.cloudinary.com/dt0wfaxft/image/upload/v1684176303/taxi_wfsk9s.png"}
                 style={{ objectFit: "contain", objectPosition: "50% 100%" }}
                 className={styles.carBox}
                 priority

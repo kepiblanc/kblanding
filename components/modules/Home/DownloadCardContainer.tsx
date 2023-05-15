@@ -12,7 +12,7 @@ const DownloadCardContainer: FC = () => {
             bgColor="#FFF5D8"
             title="Ride With Us"
             body="Get Kabukabu Rider App and enjoy the riding experience"
-            image="/home/ridewithus.png"
+            image="https://res.cloudinary.com/dt0wfaxft/image/upload/v1684178108/ridewithus_hb5dvn.png"
           />
         </div>
         <div className="flex-1 flex justify-center">
@@ -20,7 +20,7 @@ const DownloadCardContainer: FC = () => {
             bgColor="#FEE2E9"
             title="Drive With Us"
             body="Drive and earn seamlessly using the Kabukabu Driver App"
-            image="/home/drivewithus.png"
+            image="https://res.cloudinary.com/dt0wfaxft/image/upload/v1684178152/drivewithus_mw5jvj.png"
           />
         </div>
       </div>
