@@ -9,7 +9,7 @@ import Footer from "@/components/common/Footer";
 export default function Home() {
   return (
     <>
-      <AppHeader pageTitle="Kabukabu"/>
+      <AppHeader pageTitle="Kabukabu | Ride with Ease"/>
       <Jumbotron />
       <RiderDriverContainer />
       <InstructionContainer />
