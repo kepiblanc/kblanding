@@ -6,7 +6,7 @@ import Container from "@/components/common/Container";
 const instructions = [
   {
     title: "Set Destination",
-    body: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste asperiores vitae tenetur culpa, molestias voluptatum repellat natus nostrum deleniti iure.",
+    body: `Set and update your destination with ease. Open the Kabukabu app and set where you’re going`,
     image: "https://res.cloudinary.com/dt0wfaxft/image/upload/v1684177715/setdestination_mfuttb.png",
   },
   {
