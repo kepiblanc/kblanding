@@ -52,7 +52,7 @@ const Footer: FC<Props> = (props) => {
               <Link href={""}>
                 <p className="text-xs">Terms of Service</p>
               </Link>
-              <Link href={""}>
+              <Link href={"/privacy-policy"}>
                 <p className="text-xs">Privacy Policy</p>
               </Link>
             </div>

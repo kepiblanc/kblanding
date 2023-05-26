@@ -1,7 +1,7 @@
 import Container from "@/components/common/Container";
 import React, { FC } from "react";
 
-import DownloadCard from "./DownloadCard";
+import DownloadCard from "../modules/Home/DownloadCard";
 
 const DownloadCardContainer: FC = () => {
   return (
