@@ -4,8 +4,7 @@ import React, { FC } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import styles from "./styles.module.css";
-
-// #E5E5E5
+import Logo from "@/components/common/Logo";
 
 const Jumbotron: FC = () => {
   return (
@@ -24,7 +23,7 @@ const Jumbotron: FC = () => {
               viewport={{ once: true }}
               className="h-[40%]"
             >
-              <p className="text-center font-bold mb-3 text-lg">Kabukabu</p>
+              <div className="mb-3 flex justify-center">,<Logo /></div>
               <p className="text-center font-bold text-4xl">
                 Get Rides to anywhere, fast!
               </p>

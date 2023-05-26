@@ -4,6 +4,7 @@ import FacebookIcon from "../icons/FacebookIcon";
 import TwitterIcon from "../icons/TwitterIcon";
 import YoutubeIcon from "../icons/YoutubeIcon";
 import Container from "./Container";
+import Logo from "./Logo";
 
 interface Props extends HTMLAttributes<HTMLDivElement> {}
 
@@ -46,7 +47,7 @@ const Footer: FC<Props> = (props) => {
               &copy; {year} Kabukaby. All rights reserved
             </p>
             <Link href={"/"} className="order-2 max-md:order-3">
-              <p className="font-bold text-xl">Kabukabu</p>
+              <Logo />
             </Link>
             <div className="flex items-center gap-6 order-3 max-md:order-2">
               <Link href={""}>
