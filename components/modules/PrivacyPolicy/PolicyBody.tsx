@@ -13,7 +13,7 @@ const PolicyBody: FC = () => {
       />
 
       <ParagraphBody
-        content={`This Privacy Policy describes how [Your Ride-Hailing Company Name]
+        content={`This Privacy Policy describes how kabukabu
         ("we," "us," or "our") collects, uses, and shares personal information
         when you use our ride-hailing services, website, and mobile applications
         (collectively, the "Services"). We are committed to protecting your
