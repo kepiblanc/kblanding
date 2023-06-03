@@ -3,13 +3,17 @@ import React, { FC } from "react";
 import Logo from "@/components/common/Logo";
 import Button from "@/components/ui/Button/Button";
 import Container from "@/components/common/Container";
+import { useModalContext } from "@/contexts/ModalContext";
+import ConfirmationCard from "./ConfirmationCard";
 
 interface Props {
   handleNextStep: () => void;
-  handleCancel: () => void;
+  handleDoNotConfirm: () => void;
 }
 
-const StepOne: FC<Props> = ({ handleNextStep, handleCancel }) => {
+const StepOne: FC<Props> = ({ handleNextStep, handleDoNotConfirm }) => {
+  const { setModalContent } = useModalContext();
+
   return (
     <Container>
       <div className="min-h-screen px-3">
@@ -42,7 +46,19 @@ const StepOne: FC<Props> = ({ handleNextStep, handleCancel }) => {
               color="tetiary"
               size="large"
               className="w-full !bg-[#F1F1F1] !text-[#EF2C5B]"
-              onClick={handleCancel}
+              onClick={() => {
+                setModalContent(
+                  <ConfirmationCard
+                    handleIDoNotConfirm={()=>{
+                        setModalContent(null)
+                        handleDoNotConfirm()
+                    }}
+                    handleClose={() => {
+                      setModalContent(null);
+                    }}
+                  />
+                );
+              }}
             />
           </div>
         </div>
