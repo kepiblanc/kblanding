@@ -7,22 +7,20 @@ import StepThree from "@/components/modules/GuarantorsForm/StepThree";
 import Container from "@/components/common/Container";
 
 const GuarantorsForm: NextPage = () => {
-  const [currentStep, setCurrentStep] = useState<number>(1);
+  const [currentStep, setCurrentStep] = useState<number>(3);
 
   return (
     <div className="!bg-[#F8F8F8]">
-      <Container>
-        {currentStep === 1 && (
-          <StepOne
-            handleNextStep={() => {
-              setCurrentStep((step) => (step = 2));
-            }}
-            handleCancel={() => {}}
-          />
-        )}
-        {currentStep === 2 && <StepTwo />}
-        {currentStep === 3 && <StepThree />}
-      </Container>
+      {currentStep === 1 && (
+        <StepOne
+          handleNextStep={() => {
+            setCurrentStep((step) => (step = 2));
+          }}
+          handleCancel={() => {}}
+        />
+      )}
+      {currentStep === 2 && <StepTwo />}
+      {currentStep === 3 && <StepThree />}
     </div>
   );
 };

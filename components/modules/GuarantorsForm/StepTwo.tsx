@@ -98,7 +98,7 @@ const StepTwo: FC = () => {
                 }
               />
 
-              <Button title="Submit" size="large" className="" />
+              <Button title="Submit" size="large" className="" type="submit"/>
             </div>
           </Form>
         </FormikProvider>
