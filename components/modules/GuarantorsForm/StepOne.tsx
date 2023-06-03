@@ -29,7 +29,12 @@ const StepOne: FC<Props> = ({ handleNextStep, handleCancel }) => {
         </p>
 
         <div className="flex flex-col gap-4 pt-14">
-          <Button title="Continue" size="large" className="w-full" onClick={handleNextStep}/>
+          <Button
+            title="Continue"
+            size="large"
+            className="w-full"
+            onClick={handleNextStep}
+          />
           <Button
             title="I do not confirm"
             color="tetiary"
