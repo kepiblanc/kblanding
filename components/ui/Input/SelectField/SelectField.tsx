@@ -48,8 +48,8 @@ const SelectField: React.FC<Props> = (props) => {
           <option value={""} disabled hidden selected>
             Select
           </option>
-          {options?.map((opt) => {
-            return <option value={opt.value}>{opt.label}</option>;
+          {options?.map((opt, idx) => {
+            return <option value={opt.value} key={idx}>{opt.label}</option>;
           })}
         </select>
         {startIcon && !endIcon && (
