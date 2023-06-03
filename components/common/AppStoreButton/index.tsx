@@ -30,7 +30,7 @@ const AppStoreButton: FC<Props> = ({ store, variant = "light", className }) => {
       </div>
       <div className="w-full text-left leading-[5px]">
         <p className="text-xs font-bold">{btnText}</p>
-        <p className={`font-bold text-[1.33rem] leading-[13px] ${s.appstoreName}`}>{storeName}</p>
+        <p className={`font-bold text-[1.2rem] leading-[13px] ${s.appstoreName}`}>{storeName}</p>
       </div>
     </button>
   );
