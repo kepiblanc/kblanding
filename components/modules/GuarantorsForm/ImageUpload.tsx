@@ -5,8 +5,12 @@ import UserIcon from "@/components/icons/UserIcon";
 import DeleteableImage from "@/components/common/DeleteableImage";
 import { toast } from "react-toastify";
 
-const ImageUpload: FC = () => {
-  const [image, setImage] = useState<File | null>(null);
+interface Props {
+  image: File | null;
+  setImage: React.Dispatch<React.SetStateAction<File | null>>
+}
+
+const ImageUpload: FC<Props> = ({ image, setImage }) => {
   const fileRef = useRef<HTMLInputElement | null>(null);
   const [imageUrl, setImageUrl] = useState<string | null>(null);
   const [allowedMimeTypes, setAllowedMimeTypes] = useState([

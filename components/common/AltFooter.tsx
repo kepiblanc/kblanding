@@ -8,7 +8,7 @@ const AltFooter: FC = () => {
   return (
     <div className="bg-[#FFFFFF]">
       <Container>
-        <div className="flex justify-between items-center py-6 max-sm:flex-col gap-4">
+        <div className="flex justify-between items-center py-6 max-sm:flex-col gap-4 px-2">
           <Logo />
           <div className="flex items-center gap-6">
             <AppStoreButton store="android" variant="dark" />

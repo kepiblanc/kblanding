@@ -63,3 +63,6 @@
     @apply bg-[#F1F1F1] text-[#000] 
 }
 
+.disabled {
+    @apply cursor-not-allowed
+}

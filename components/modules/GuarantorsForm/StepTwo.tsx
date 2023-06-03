@@ -1,5 +1,7 @@
-import React, { FC } from "react";
+import React, { FC, useEffect, useState } from "react";
+import { useRouter } from "next/router";
 
+import { toast } from "react-toastify";
 import Logo from "@/components/common/Logo";
 import ImageUpload from "./ImageUpload";
 import SelectField from "@/components/ui/Input/SelectField/SelectField";
@@ -8,8 +10,10 @@ import Button from "@/components/ui/Button/Button";
 import { useFormik, Form, FormikProvider } from "formik";
 import GuarantorsFormValidations from "@/validations/GuarantorsFormValidations";
 import Container from "@/components/common/Container";
+import { useSubmitGuarantorsFormMutation } from "@/api-services/guarantors";
+import { verifyIsDigit } from "@/utils";
 
-const initalValues = {
+const initalValues: Record<string, string> = {
   full_name: "",
   phone_number: "",
   email: "",
@@ -20,12 +24,52 @@ const initalValues = {
   occupation: "",
 };
 
-const StepTwo: FC = () => {
+interface Props {
+    handleNextStep: ()=>void
+}
+
+const StepTwo: FC<Props> = ({ handleNextStep }) => {
+  const [image, setImage] = useState<File | null>(null);
+
+  const router = useRouter();
+  const { id } = router.query;
+
   const formik = useFormik({
     initialValues: initalValues,
     validationSchema: GuarantorsFormValidations,
-    onSubmit: (values) => {},
+    onSubmit: (values) => {
+      const form = new FormData();
+      if (!image) {
+        toast.error("Please upload an image");
+      } else {
+        form.append("image", image);
+
+        for (const key in values) {
+          form.append(key, values[key]);
+        }
+        submitForm({ body: form, id: String(id) });
+      }
+    },
   });
+
+  const [submitForm, { isLoading, isSuccess, isError, error }] =
+    useSubmitGuarantorsFormMutation();
+
+  useEffect(()=>{
+    if(isSuccess){
+        toast.success('Form Submitted Successfully')
+        handleNextStep()
+    }
+  }, [isSuccess])
+
+  useEffect(()=>{
+    if(error){
+        if("data" in error){
+            const { message }: any = error.data
+            toast.error(message)
+        }
+    }
+  },[error])
 
   return (
     <Container>
@@ -35,7 +79,7 @@ const StepTwo: FC = () => {
         </div>
 
         <div className="max-w-[400px] mx-auto">
-          <ImageUpload />
+          <ImageUpload image={image} setImage={setImage} />
 
           <FormikProvider value={formik}>
             <Form>
@@ -81,11 +125,13 @@ const StepTwo: FC = () => {
                   <SelectField
                     label="City"
                     placeholder="City here"
+                    options={[{ label: "Lagos", value: "Lagos" }]}
                     required={true}
                     {...formik.getFieldProps("city")}
                     error={formik.touched.city ? formik.errors.city : ""}
                   />
                   <SelectField
+                    options={[{ label: "lagos", value: "lagos" }]}
                     label="State"
                     required={true}
                     placeholder="State here"
@@ -104,6 +150,19 @@ const StepTwo: FC = () => {
                       ? formik.errors.phone_number
                       : ""
                   }
+                  onChange={(e) => {
+                    if (verifyIsDigit(e.target.value)) {
+                      formik.setFieldValue("phone_number", e.target.value);
+                    }
+                  }}
+                />
+
+                <TextField
+                  label="Email"
+                  required={true}
+                  placeholder="Email here"
+                  {...formik.getFieldProps("email")}
+                  error={formik.touched.email ? formik.errors.email : ""}
                 />
 
                 <Button
@@ -111,6 +170,8 @@ const StepTwo: FC = () => {
                   size="large"
                   className=""
                   type="submit"
+                  loading={isLoading}
+                  disabled={!id || isLoading}
                 />
               </div>
             </Form>

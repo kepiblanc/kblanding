@@ -1,10 +1,11 @@
-import React, { FC } from "react";
+import React, { FC, useEffect } from "react";
 
 import Logo from "@/components/common/Logo";
 import Button from "@/components/ui/Button/Button";
 import Container from "@/components/common/Container";
 import { useModalContext } from "@/contexts/ModalContext";
 import ConfirmationCard from "./ConfirmationCard";
+import { useRouter } from "next/router";
 
 interface Props {
   handleNextStep: () => void;
@@ -13,6 +14,9 @@ interface Props {
 
 const StepOne: FC<Props> = ({ handleNextStep, handleDoNotConfirm }) => {
   const { setModalContent } = useModalContext();
+  const router = useRouter();
+
+  const { id, full_name } = router.query;
 
   return (
     <Container>
@@ -28,10 +32,10 @@ const StepOne: FC<Props> = ({ handleNextStep, handleDoNotConfirm }) => {
 
         <div className="max-w-[600px] mx-auto pt-16">
           <p className="text-center leading-9 text-base font-semibold">
-            John Doe has mentioned you as his guarantor when applying to drive
-            with us at Kabukabu. If you confirm this, kindly tap “Continue” and
-            fill our Guarantor’s Form. If you do not confirm this, kindly tap “I
-            do not confirm”
+            {full_name} has mentioned you as his guarantor when applying to
+            drive with us at Kabukabu. If you confirm this, kindly tap
+            “Continue” and fill our Guarantor’s Form. If you do not confirm
+            this, kindly tap “I do not confirm”
           </p>
 
           <div className="flex flex-col gap-4 pt-14">
@@ -49,9 +53,9 @@ const StepOne: FC<Props> = ({ handleNextStep, handleDoNotConfirm }) => {
               onClick={() => {
                 setModalContent(
                   <ConfirmationCard
-                    handleIDoNotConfirm={()=>{
-                        setModalContent(null)
-                        handleDoNotConfirm()
+                    handleIDoNotConfirm={() => {
+                      setModalContent(null);
+                      handleDoNotConfirm();
                     }}
                     handleClose={() => {
                       setModalContent(null);

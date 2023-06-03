@@ -15,10 +15,7 @@ const UserDidNotConfirm: FC = () => {
             Thank you
           </h1>
           <p className="text-center leading-9 text-base font-semibold">
-            John Doe has mentioned you as his guarantor when applying to drive
-            with us at Kabukabu. If you confirm this, kindly tap “Continue” and
-            fill our Guarantor’s Form. If you do not confirm this, kindly tap “I
-            do not confirm”
+            Thank you for your feedback
           </p>
         </div>
       </div>

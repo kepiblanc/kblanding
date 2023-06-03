@@ -20,7 +20,13 @@ const GuarantorsForm: NextPage = () => {
           handleDoNotConfirm={() => setUserDidNotConfirm(true)}
         />
       )}
-      {!userDidNotConfirm && currentStep === 2 && <StepTwo />}
+      {!userDidNotConfirm && currentStep === 2 && (
+        <StepTwo
+          handleNextStep={() => {
+            setCurrentStep((step) => (step = 3));
+          }}
+        />
+      )}
       {!userDidNotConfirm && currentStep === 3 && <StepThree />}
       {userDidNotConfirm && <UserDidNotConfirm />}
     </div>
