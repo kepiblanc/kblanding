@@ -4,10 +4,11 @@ import IconButton from "@/components/ui/IconButton";
 import UserIcon from "@/components/icons/UserIcon";
 import DeleteableImage from "@/components/common/DeleteableImage";
 import { toast } from "react-toastify";
+import { motion } from "framer-motion";
 
 interface Props {
   image: File | null;
-  setImage: React.Dispatch<React.SetStateAction<File | null>>
+  setImage: React.Dispatch<React.SetStateAction<File | null>>;
 }
 
 const ImageUpload: FC<Props> = ({ image, setImage }) => {
@@ -42,13 +43,19 @@ const ImageUpload: FC<Props> = ({ image, setImage }) => {
             if (validateImage(img)) {
               getImageUrl(img);
               setImage(img);
-            }
-            else toast.error('Upload a valid image')
+            } else toast.error("Upload a valid image");
           }
         }}
       />
       {!image && !imageUrl && (
-        <div>
+        <motion.div
+          initial={{ opacity: 0.4 }}
+          whileInView={{
+            opacity: 1,
+            transition: { duration: 0.6 },
+          }}
+          viewport={{ once: true }}
+        >
           <p className="text-xs mb-4">Upload your image</p>
 
           <div>
@@ -61,7 +68,7 @@ const ImageUpload: FC<Props> = ({ image, setImage }) => {
               }}
             />
           </div>
-        </div>
+        </motion.div>
       )}
       {image && imageUrl && (
         <DeleteableImage

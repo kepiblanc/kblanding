@@ -13,6 +13,7 @@ import Container from "@/components/common/Container";
 import { useSubmitGuarantorsFormMutation } from "@/api-services/guarantors";
 import { verifyIsDigit } from "@/utils";
 import { motion } from "framer-motion";
+import states from '../../../json_data/states.json'
 
 const initalValues: Record<string, string> = {
   full_name: "",
@@ -131,16 +132,15 @@ const StepTwo: FC<Props> = ({ handleNextStep }) => {
                   />
 
                   <div className="flex justify-between gap-3">
-                    <SelectField
+                    <TextField
                       label="City"
                       placeholder="City here"
-                      options={[{ label: "Lagos", value: "Lagos" }]}
                       required={true}
                       {...formik.getFieldProps("city")}
                       error={formik.touched.city ? formik.errors.city : ""}
                     />
                     <SelectField
-                      options={[{ label: "lagos", value: "lagos" }]}
+                      options={[...states].map((s)=>({label: s, value: s}))}
                       label="State"
                       required={true}
                       placeholder="State here"

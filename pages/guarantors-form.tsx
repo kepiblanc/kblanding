@@ -5,31 +5,35 @@ import StepOne from "@/components/modules/GuarantorsForm/StepOne";
 import StepTwo from "@/components/modules/GuarantorsForm/StepTwo";
 import StepThree from "@/components/modules/GuarantorsForm/StepThree";
 import UserDidNotConfirm from "@/components/modules/GuarantorsForm/UserDidNotConfirm";
+import AppHeader from "@/components/common/AppHeader";
 
 const GuarantorsForm: NextPage = () => {
   const [currentStep, setCurrentStep] = useState<number>(1);
   const [userDidNotConfirm, setUserDidNotConfirm] = useState(false);
 
   return (
-    <div className="!bg-[#F8F8F8]">
-      {!userDidNotConfirm && currentStep === 1 && (
-        <StepOne
-          handleNextStep={() => {
-            setCurrentStep((step) => (step = 2));
-          }}
-          handleDoNotConfirm={() => setUserDidNotConfirm(true)}
-        />
-      )}
-      {!userDidNotConfirm && currentStep === 2 && (
-        <StepTwo
-          handleNextStep={() => {
-            setCurrentStep((step) => (step = 3));
-          }}
-        />
-      )}
-      {!userDidNotConfirm && currentStep === 3 && <StepThree />}
-      {userDidNotConfirm && <UserDidNotConfirm />}
-    </div>
+    <>
+      <AppHeader pageTitle="Kabukabu | Guarantors Form" />
+      <div className="!bg-[#F8F8F8]">
+        {!userDidNotConfirm && currentStep === 1 && (
+          <StepOne
+            handleNextStep={() => {
+              setCurrentStep((step) => (step = 2));
+            }}
+            handleDoNotConfirm={() => setUserDidNotConfirm(true)}
+          />
+        )}
+        {!userDidNotConfirm && currentStep === 2 && (
+          <StepTwo
+            handleNextStep={() => {
+              setCurrentStep((step) => (step = 3));
+            }}
+          />
+        )}
+        {!userDidNotConfirm && currentStep === 3 && <StepThree />}
+        {userDidNotConfirm && <UserDidNotConfirm />}
+      </div>
+    </>
   );
 };
 
