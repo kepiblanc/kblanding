@@ -14,7 +14,7 @@ interface Props {
 const DeleteableImage: FC<Props> = ({ image, imageId, handleDelete }) => {
   return (
     <motion.div
-      initial={{ scale: .7 }}
+      initial={{ scale: 1.2 }}
       whileInView={{
         scale: 1,
         transition: { duration: 0.4 },
