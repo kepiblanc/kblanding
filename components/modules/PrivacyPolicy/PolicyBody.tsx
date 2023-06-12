@@ -1,8 +1,8 @@
 import React, { FC } from "react";
 
-import ParagraphHeading from "./ParagraphHeading";
-import ParagraphBody from "./ParagraphBody";
-import BulletPointContainer from "./BulletPointContainer";
+import BulletPointContainer from "../../common/BulletPointContainer";
+import ParagraphBody from "@/components/common/ParagraphBody";
+import ParagraphHeading from "@/components/common/ParagraphHeading";
 
 const PolicyBody: FC = () => {
   return (

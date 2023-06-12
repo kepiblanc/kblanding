@@ -50,7 +50,7 @@ const Footer: FC<Props> = (props) => {
               <Logo />
             </Link>
             <div className="flex items-center gap-6 order-3 max-md:order-2">
-              <Link href={""}>
+              <Link href={"/terms-of-service"}>
                 <p className="text-xs">Terms of Service</p>
               </Link>
               <Link href={"/privacy-policy"}>
