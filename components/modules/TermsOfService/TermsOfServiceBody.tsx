@@ -1,6 +1,5 @@
 import React, { FC } from "react";
 
-import BulletPointContainer from "../../common/BulletPointContainer";
 import ParagraphBody from "@/components/common/ParagraphBody";
 import ParagraphHeading from "@/components/common/ParagraphHeading";
 
