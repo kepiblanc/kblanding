@@ -17,7 +17,7 @@ const Footer: FC<Props> = (props) => {
         <div className="px-8 max-md:px-2">
           <div className="flex justify-between py-6 border-b border-b-[#A6A6A6] max-md:flex-col max-md:gap-4">
             <div className="flex items-center gap-4">
-              <Link href="">
+              <Link href="/about-us">
                 <p className="text-sm">About Kabukabu</p>
               </Link>
               <Link href="">

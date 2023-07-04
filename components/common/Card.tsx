@@ -5,19 +5,27 @@ interface Props {
   maxHeight?: string;
   height?: string;
   elevation?: boolean;
+  bg?: string;
+  margin?: string
+  padding?: string
 }
 
 const Card: FC<PropsWithChildren<Props>> = ({
   maxWidth = "",
-  maxHeight="",
+  maxHeight = "",
   height = "",
+  bg = "",
+  margin = "",
+  padding = "1rem",
   elevation,
   children,
 }) => {
   return (
     <div
-      className={`bg-[#FFFFFF] rounded-lg w-full p-4 ${elevation ? 'shadow-md' : ''} ${maxHeight ? 'overflow-y-auto scrollbar-none':''}`}
-      style={{ maxWidth, height, maxHeight }}
+      className={`bg-[#FFFFFF] rounded-lg w-full ${
+        elevation ? "shadow-md" : ""
+      } ${maxHeight ? "overflow-y-auto scrollbar-none" : ""}`}
+      style={{ maxWidth, height, maxHeight, backgroundColor: bg, margin, padding }}
     >
       {children}
     </div>
