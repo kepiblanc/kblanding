@@ -14,7 +14,7 @@ const CoreStrengthContainer: FC<Props> = ({ data, title }) => {
       <Card bg="#FDE5F0" margin="20px 0">
         <div className="px-4">
           <p className="text-center text-3xl font-bold mb-12">{title}</p>
-          <div className="grid grid-cols-3 gap-24 max-lg:grid-cols-2 max-md:grid-cols-1">
+          <div className="grid items-start grid-cols-3 gap-24 max-lg:grid-cols-2 max-md:grid-cols-1">
             {data.map((item, idx) => {
               return <CoreStrengthItem {...item} key={idx} />;
             })}

@@ -4,19 +4,16 @@ import Card from "@/components/common/Card";
 
 const Intro: FC = () => {
   return (
-    <div className="px-8 mt-[20px]">
+    <div className="px-8 mt-[50px]">
       <Card bg="#FFF5D8">
         <div className="px-4">
           <p className="leading-10 text-base text-center">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
-            minima perferendis nesciunt explicabo, laboriosam debitis
-            accusantium excepturi dolore libero facilis voluptatibus eveniet
-            error architecto repellat obcaecati quos impedit, iste, itaque
-            delectus accusamus cum minus! Nobis, rem libero voluptatum eaque
-            facilis natus quia sint voluptate, possimus suscipit optio nam
-            inventore veritatis dolores ipsam illo. Nesciunt commodi a
-            praesentium incidunt voluptate sequi, iusto distinctio velit cumque
-            nihil temporibus aliquam cum, quos provident?
+            Kabukabu is an easy-to-use ride-hailing platform providing safe
+            secure, convenient, affordable, and efficient logistic solutions to
+            users nationwide. We strive to become the best e-logistic service
+            trusted by Nigerians and African countries as a whole. We provide
+            safe and profitable environments for our drivers also where they can
+            drive and earn successfully.
           </p>
         </div>
       </Card>

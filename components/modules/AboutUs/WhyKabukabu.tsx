@@ -10,11 +10,12 @@ const WhyKabukabu: FC = () => {
           <div style={{ flex: 1 }} className="pt-10 p-4">
             <p className="mb-4 text-2xl font-bold">Why Kabukabu</p>
             <p className="text-base font-medium leading-10">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti
-              harum, neque nostrum ipsum vitae facilis facere nam, saepe quas
-              nulla corporis modi perspiciatis eaque labore, dicta magnam
-              mollitia. Ut nisi eius saepe harum libero quidem nobis deserunt
-              aliquid, placeat vel?
+              Kabukabu is a great choice in times of high demand, there is
+              always a driver nearby when you need a low- cost ride fast. If you
+              need a ride that looks good, Kabukabu has a great selection of
+              vehicles. The customer service is great and the in-app user
+              interface is seamless making it easy to use. The wallet feature
+              helps you budget for your rides ahead of time easily.
             </p>
           </div>
           <div
