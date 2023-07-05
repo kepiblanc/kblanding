@@ -14,6 +14,7 @@ const Banner: FC = () => {
           "https://res.cloudinary.com/dt0wfaxft/image/upload/v1688473352/Header_Image_dvcdye.png"
         }
         style={{ objectFit: "cover" }}
+        priority
       />
       <div>
         <Logo />
