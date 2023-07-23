@@ -44,7 +44,7 @@ const Footer: FC<Props> = (props) => {
 
           <div className="flex justify-between items-center py-6 pb-20 max-md:pb-6 max-md:flex-col max-md:gap-4 max-md:items-start">
             <p className="text-xs order-1">
-              &copy; {year} Kabukaby. All rights reserved
+              &copy; {year} Kabukabu. All rights reserved
             </p>
             <Link href={"/"} className="order-2 max-md:order-3">
               <Logo />
