@@ -23,7 +23,7 @@ const Jumbotron: FC = () => {
               viewport={{ once: true }}
               className="h-[40%]"
             >
-              <div className="mb-3 flex justify-center">,<Logo /></div>
+              <div className="mb-3 flex justify-center"><Logo /></div>
               <p className="text-center font-bold text-4xl">
                 Get Rides to anywhere, fast!
               </p>
