@@ -98,7 +98,6 @@
     color: var(--text-primary);
     overscroll-behavior-x: none;
     font-family: 'Sofia Sans Semi Condensed', sans-serif;
-    @apply select-none;
     background-color: #F1F1F1;
   }
   
