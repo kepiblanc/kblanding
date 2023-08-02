@@ -65,7 +65,25 @@ const TermsOfServiceBody: FC = () => {
         className="pb-8"
       />
 
-      <ParagraphHeading content="4. Intellectual Property" className="pb-3" />
+      <ParagraphHeading content="4. Data Collection" className="pb-3" />
+      <ParagraphBody
+        content={`4.1. How we collect location data (Driver): We collect precise or approximate location data from driver’s device when the Kabukabu app is running in the background (when the app is open but not on-screen) or foreground (when the app is open and on-screen).`}
+      />
+      <ParagraphBody
+        content={`4.2. How we collect location data  (Riders). We collect precise or approximate location information from the rider's device if they enable the app to do so via their device settings. `}
+      />
+      <ParagraphBody
+        content={`4.3. We collect such data from the time a ride is requested until the end of the trip, and any time the app is running in the foreground (when the app is open and on-screen). `}
+      />
+      <ParagraphBody
+        content={`4.4. Riders can choose to use the Kabukabu app without enabling location data collection from their mobile devices. However, this may affect certain features in the app. I.e, a rider who has not enabled precise location data will have to manually enter their pickup location.`}
+      />
+      <ParagraphBody
+        content={`4.5. Precise location data collected from a driver’s device during a trip is linked to the rider’s account, even if the rider has not enabled precise location data to be collected from their device. This data is used for purposes such as receipt generation, customer support, fraud detection, insurance, and litigation.`}
+        className="mb-8"
+      />
+
+      <ParagraphHeading content="5. Intellectual Property" className="pb-3" />
       <ParagraphBody
         content={`All intellectual property rights in our Services, including but not limited to trademarks, logos, and content, 
         belong to us or our licensors. You are granted a limited, non-exclusive, non-transferable license to use our Services solely for 
@@ -76,7 +94,7 @@ const TermsOfServiceBody: FC = () => {
       />
 
       <ParagraphHeading
-        content="5. Disclaimer of Warranties"
+        content="6. Disclaimer of Warranties"
         className="pb-3"
       />
       <ParagraphBody
@@ -90,7 +108,7 @@ const TermsOfServiceBody: FC = () => {
         className="pb-8"
       />
 
-      <ParagraphHeading content="6. Limitation of Liability" className="pb-3" />
+      <ParagraphHeading content="7. Limitation of Liability" className="pb-3" />
       <ParagraphBody
         content={`To the maximum extent permitted by applicable law, we shall not 
         be liable for any indirect, incidental, special, consequential, or exemplary 
@@ -101,8 +119,24 @@ const TermsOfServiceBody: FC = () => {
         className="pb-8"
       />
 
+      <ParagraphHeading content="8. Account Deletion" className="pb-3" />
+      <ParagraphBody
+        content={`If you would like to delete your Kabukabu account; 
+        `}
+      />
+      <ParagraphBody
+        content={`8.1. Once you delete your account, it will be immediately deleted, and any unused credits, promotions, or rewards will be removed.`}
+      />
+      <ParagraphBody
+        content={`8.2. You can choose to delete your Kabukabu account whenever you want. As a result of that, you will not be able to use the Kabukabu app via an account that has been deleted.`}
+      />
+      <ParagraphBody
+        content={`8.3.  Your personal data will be stored as long as you have an active account. If your account is closed, personal data will be deleted from the databases, unless such data is required to be retained for accounting, dispute resolution, or fraud prevention purposes`}
+        className="mb-8"
+      />
+
       <ParagraphHeading
-        content="7. Modifications to the Terms"
+        content="9. Modifications to the Terms"
         className="pb-3"
       />
       <ParagraphBody
@@ -115,7 +149,7 @@ const TermsOfServiceBody: FC = () => {
       />
 
       <ParagraphHeading
-        content="8. Governing Law and Dispute Resolution"
+        content="10. Governing Law and Dispute Resolution"
         className="pb-3"
       />
       <ParagraphBody
@@ -130,7 +164,7 @@ const TermsOfServiceBody: FC = () => {
         className="pb-8"
       />
 
-      <ParagraphHeading content="9. Contact Us" className="pb-3" />
+      <ParagraphHeading content="11. Contact Us" className="pb-3" />
       <ParagraphBody
         content={`If you have any questions or concerns regarding these Terms, 
         please contact us at support@kabukabu.com.ng.
