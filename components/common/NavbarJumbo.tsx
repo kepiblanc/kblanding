@@ -79,6 +79,17 @@ const NavbarJumbo: React.FC = () => {
           </div>
           {isMobileMenuOpen && (
             <div className="md:hidden block">
+              <div className="flex flex-col justify-between gap-3 items-center justify-center py-4 z-20 bg-[#FFF]">
+                <a className='text-[#000]' href={"/"}>
+                  Ride With Us
+                </a>
+                <a className='text-[#000]' href={"/drivers"}>
+                  Drive With Us
+                </a>
+                <a className='text[#000]' href={"/sharp"}>
+                  Drive For Us
+                </a>
+              </div>
               <ul className="flex flex-col space-y-2 items-center">
                 <li>
                     <a href={"https://kabukaburider.page.link/app"}>
