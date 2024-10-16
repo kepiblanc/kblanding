@@ -6,15 +6,23 @@ import DownloadCardContainer from "@/components/common/DownloadCardContainer";
 import AppHeader from "@/components/common/AppHeader";
 import Footer from "@/components/common/Footer";
 import Navbar from "@/components/common/Navbar";
+import WhyYouLoveUs from "@/components/common/WhyYouLoveUs";
+import BuildBetterCommunity from "@/components/common/BuildBetterCommunity";
+import ThingsWeDo from "@/components/common/ThingsWeDo";
+import AppCommunity from "@/components/common/AppCommunity";
 
 export default function Home() {
   return (
     <>
       <AppHeader pageTitle="Kabukabu | Ride with Ease" />
       <Navbar />
-      <Jumbotron />
-      <RiderDriverContainer />
-      <InstructionContainer />
+      <div className="bg-no-repeat bg-center bg-cover" style={{backgroundImage: `url(/home/rider-hero-bg.png)`}}>
+        <Jumbotron />
+      </div>
+      <WhyYouLoveUs />
+      <BuildBetterCommunity />
+      <ThingsWeDo />
+      <AppCommunity />
       <DownloadCardContainer />
       <Footer />
     </>

@@ -6,14 +6,18 @@ import { motion } from "framer-motion";
 import styles from "./styles.module.css";
 import Logo from "@/components/common/Logo";
 import Button from "@/components/ui/Button/Button";
+import NavbarJumbo from "@/components/common/NavbarJumbo";
+
+//${styles.jumboContainer}
 
 const Jumbotron: FC = () => {
-  return (
-    <>
-      <div className={`min-h-[85vh] ${styles.jumboContainer}`}>
-        <img src="/home/jumbo-bg.png" style={{ display: "none" }} />
+  return ( 
+    <div className="relative w-full min-h-[85vh] bg-cover bg-center">
+      <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+      <NavbarJumbo />
+      <div className={`relative z-10 min-h-[85vh]`}>
         <Container>
-          <div className="flex-col pt-20 h-[80vh] min-h-[500px] px-2">
+          <div className="flex-col pt-20 h-[80vh] min-h-[500px] px-2 md:px-[5vw]">
             <motion.div
               initial={{ translateY: 185, opacity: 0 }}
               whileInView={{
@@ -22,31 +26,26 @@ const Jumbotron: FC = () => {
                 transition: { duration: 0.8 },
               }}
               viewport={{ once: true }}
-              className="h-[40%]"
+              className="h-[40%] flex flex-col gap-4"
             >
-              <div className="mb-3 flex justify-center"><Logo /></div>
-              <p className="text-center font-bold text-4xl">
-                Earn Money Driving For KabuKabu
+              <p className="text-start text-[#FFF] font-bold text-4xl z-30">
+                Your Premium Ride-Hailing <br /> Experience!
               </p>
-              <div className="flex justify-center gap-6 mt-6 max-sm:gap-2">
-                {/* <AppStoreButton store="android" />
-                <AppStoreButton store="apple" /> 
+              <p className="text-start text-[#FFF] font-semibold text-md z-30">
+                Discover the Future of Transportation with Kabukabu 
+              </p>
+              <div className="flex justify-start gap-6 max-sm:gap-2">
                 <a href={"https://kabukaburider.page.link/app"}>
                   <Button
-                  title={'Download Rider App'}
-                  className="!text-[16px] mt-6"
-                  size="large" />
-                </a>*/}
-                <a href={"https://kabukabudriver.page.link/app"}>
-                  <Button
-                  title={'Download Driver App'}
-                  className="!text-[16px] mt-6"
-                  size="large" />
+                    title={'Get The App'}
+                    className="!text-[16px] font-semibold"
+                    size="large"
+                  />
                 </a>
               </div>
             </motion.div>
 
-            <motion.div
+            {/*<motion.div
               initial={{ translateX: "-100%", opacity: 0, }}
               whileInView={{
                 translateX: 0,
@@ -64,12 +63,12 @@ const Jumbotron: FC = () => {
                 className={styles.carBox}
                 priority
               />
-            </motion.div>
+            </motion.div>*/}
           </div>
         </Container>
       </div>
-      <div className={`h-[30vh] min-h-[100px] max-sm:h-[100px] ${styles.jumboGradient}`}></div>
-    </>
+      {/*<div className={`h-[30vh] min-h-[100px] max-sm:h-[100px] ${styles.jumboGradient}`}></div>*/}
+    </div>
   );
 };
 

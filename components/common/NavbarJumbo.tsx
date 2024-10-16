@@ -7,7 +7,7 @@ import MenuIconLgScreen from '../icons/MenuIconLgScreen';
 import MenuIconLgScreenDark from '../icons/MenuIconLgScreenDark';
 import LogoDark from './LogoDark';
 
-const Navbar: React.FC = () => {
+const NavbarJumbo: React.FC = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [bgOpacityDisplayed, setBgOpacityDisplayed] = useState(true);
 
@@ -39,51 +39,39 @@ const Navbar: React.FC = () => {
   return (
     <>
       {
-        !bgOpacityDisplayed &&
-        <nav className={`bg-[#FFF] p-8 sticky top-0 z-50`}>
+        bgOpacityDisplayed &&
+        <nav className={`bg-opacity-0 p-8 z-50`}>
           <div className="container mx-auto flex justify-between items-center px-[5vw]">
             <div className="flex items-center gap-6">
-                <LogoDark />
-                <div className="hidden md:flex md:justify-between gap-6">
-                  <a className='text-[#000]' href={"/"}>
+                <Logo />
+                <div className="hidden md:flex md:justify-between gap-6 z-10">
+                  <a className='text-white' href={"/"}>
                     Ride With Us
                   </a>
-                  <a className='text-[#000]' href={"/drivers"}>
+                  <a className='text-white' href={"/drivers"}>
                     Drive With Us
                   </a>
-                  <a className='text-[#000]' href={"/sharp"}>
+                  <a className='text-white' href={"/sharp"}>
                     Drive For Us
                   </a>
                 </div>     
             </div>
-            <div className="hidden md:flex items-center space-x-4 mb-3">
-                <a className='text-[#000]' href={"/about-us"}>
+            <div className="hidden md:flex items-center space-x-4 mb-3 z-10">
+                <a className='text-white' href={"/about-us"}>
                   About
                 </a>
-                <a className='text-[#000]' href={"/support"}>
+                <a className='text-white' href={"/support"}>
                   Support
                 </a>
                 <a href={"/signup"}>
-                    <button className="text-xs text-[#000] rounded-md bg-[#FFBF00] py-2 px-4">{'Sign Up'}</button>
+                    <button className="text-xs text-[#000] rounded-md bg-[#FDFDFD] py-2 px-4">{'Sign Up'}</button>
                 </a>
-                <button><MenuIconLgScreenDark /></button>
-                {/*<a href={"https://kabukaburider.page.link/app"}>
-                    <Button
-                    title={'Download Rider App'}
-                    className="!text-[16px] mt-6"
-                    size="medium" />
-                </a>
-                <a href={"https://kabukabudriver.page.link/app"}>
-                    <Button
-                    title={'Download Driver App'}
-                    className="!text-[16px] mt-6"
-                    size="medium" />
-                </a>*/}
+                <button><MenuIconLgScreen /></button>
             </div>
             <div className="md:hidden block">
               <button
                 onClick={toggleMobileMenu}
-                className="block text-2xl focus:outline-none"
+                className="block text-white text-2xl focus:outline-none"
               >
                 &#8801;
               </button>
@@ -117,4 +105,4 @@ const Navbar: React.FC = () => {
   );
 };
 
-export default Navbar;
+export default NavbarJumbo;
