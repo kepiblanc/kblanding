@@ -98,14 +98,12 @@
     color: var(--text-primary);
     overscroll-behavior-x: none;
     font-family: 'Sofia Sans Semi Condensed', sans-serif;
-    background-color: #F1F1F1;
   }
   
   body {
     position: relative;
     min-height: 100%;
     margin: 0;
-    background-color: #F1F1F1;
   }
   
   a {

@@ -7,7 +7,9 @@ import MenuIconLgScreen from '../icons/MenuIconLgScreen';
 import MenuIconLgScreenDark from '../icons/MenuIconLgScreenDark';
 import LogoDark from './LogoDark';
 
-const Navbar: React.FC = () => {
+
+
+const Navbar: React.FC<any> = ({ showOnLoad }) => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [bgOpacityDisplayed, setBgOpacityDisplayed] = useState(true);
 
@@ -26,8 +28,12 @@ const Navbar: React.FC = () => {
       }
     };
 
+    if (showOnLoad) {
+      setBgOpacityDisplayed(!showOnLoad);
+    }
+
     // Add scroll event listener
-    window.addEventListener('scroll', handleScroll);
+    if (!showOnLoad) window.addEventListener('scroll', handleScroll);
 
     // Cleanup the event listener when component unmounts
     return () => {
